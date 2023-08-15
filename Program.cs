@@ -150,7 +150,6 @@ namespace ConsoleApp
                     BirthDate = Faker.Identification.DateOfBirth(),
                     Gender = Faker.Enum.Random<Gender>().ToString()
                 });
-                Console.WriteLine(i);
             }
             Console.WriteLine("Запись данных в бд");
             using (ApplicationContext db = new ApplicationContext())
@@ -173,7 +172,6 @@ namespace ConsoleApp
                 }
                 else
                 {
-                    Console.WriteLine(users.Count);
                     users.Add(new User()
                     {
                         FullName = fullName,
